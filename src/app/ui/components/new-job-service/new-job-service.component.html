@@ -1,0 +1,23 @@
+<div class="card mt-4">
+    <div class="card-body pb-0">
+        <h3 class="card-title mb-0">Servicio</h3>
+    </div>
+
+    <form action="">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Nombre</label>
+                <input type="text" class="form-control" aria-describedby="name"
+                name="title" [(ngModel)]="newJobService.title">
+            </div>
+            <div class="form-group">
+                <label for="">Descripcion</label>
+                <textarea type="text" class="form-control" name="description" [(ngModel)]="newJobService.description"></textarea>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-outline-success mr-4" (click)="addJobService()">Grabar</button>
+            <button type="submit" class="btn btn-outline-danger">Cancelar</button>
+        </div>
+    </form>
+</div>
