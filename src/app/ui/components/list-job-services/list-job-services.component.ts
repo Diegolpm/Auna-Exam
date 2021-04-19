@@ -11,7 +11,7 @@ export class ListJobServicesComponent implements OnInit {
 
   constructor(private listJobService: JobServiceService) { }
 
-  @Output() sendPosition = new EventEmitter;
+  @Output() sendPosition = new EventEmitter<string>();
 
   myJobs: JobService[];
 
@@ -24,7 +24,7 @@ export class ListJobServicesComponent implements OnInit {
   }
 
   getPosition(id): void {
-    this.sendPosition.emit(id);
+    this.sendPosition.emit(id); //este dato viajará hacia el padre
     this.listJobService.editJobService(id);
   }
 

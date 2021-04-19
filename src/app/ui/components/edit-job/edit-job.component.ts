@@ -2,17 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { JobServiceService } from 'src/app/data/services/job-service.service';
 
 @Component({
-  selector: 'app-job-service',
-  templateUrl: './job-service.component.html',
-  styleUrls: ['./job-service.component.scss']
+  selector: 'app-edit-job',
+  templateUrl: './edit-job.component.html',
+  styleUrls: ['./edit-job.component.scss']
 })
-export class JobServiceComponent implements OnInit {
-
+export class EditJobComponent implements OnInit {
 
   myJob;
   jobFound;
 
-  constructor(private jobService: JobServiceService) { }
+  constructor(
+    private jobService: JobServiceService
+  ) { }
 
   ngOnInit(): void {
   }
